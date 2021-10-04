@@ -26,7 +26,7 @@ female_pool = c(0, 1),
 order_pool = c(1, 2, 3, 4, 5, 6)
 )
 #scale data as in the linear model beta values used below
-pool = as.data.frame(scale(pool))
+pool = data.frame(scale(pool[,1:4]), pool[,5, drop=F], scale(pool[,6, drop=F]))
 
 #function creates simulated data frame
 create_sim_results = function(n, e){ #n = 100; e= 0
