@@ -1,0 +1,194 @@
+---
+title: "Job Applications in an Age of Social Media: Experimental Design"
+subtitle: 
+author: "Veronika, Yuval, Ed"
+institute: 
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+<style>
+table {
+
+}
+.beta th {
+  font-size: 70%;
+}
+.beta td {
+  font-size: 60%;
+}
+
+</style>
+
+```{r setup, include=FALSE}
+library(knitr)
+options(htmltools.dir.version = FALSE)
+```
+
+
+<iframe src="https://ourworldindata.org/grapher/users-by-social-media-platform?time=2004..latest&country=Facebook~Instagram~MySpace~Pinterest~Reddit~Snapchat~TikTok~Tumblr~Twitter~WeChat~Whatsapp~YouTube" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+---
+
+```{r, echo=F}
+# All defaults
+include_graphics("https://kinsta.com/wp-content/uploads/2018/10/linkedin-members-map.png")
+```
+
+.center[Linkedin has 310 MAUs and 740 million members. (Only 16M in DACH) ]
+
+---
+
+<iframe src="https://ourworldindata.org/grapher/daily-hours-spent-with-digital-media-per-adult-user?country=~USA" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+---
+
+<iframe src="https://ourworldindata.org/grapher/technology-adoption-by-households-in-the-united-states?country=Smartphone+usage~Computer~Internet~Landline~Social+media+usage~Tablet" loading="lazy" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+---
+
+# Employers Use Social Media
+
+.bullet[
+- 70% employers use social networking sites to research candidates
+
+- Of those, 57% found content that caused them not to hire candidates
+
+- 47% say if they can't find a job candidate online, they are less likely to call that person for an interview
+
+(Source: [Career Builder Survey](https://press.careerbuilder.com/2018-08-09-More-Than-Half-of-Employers-Have-Found-Content-on-Social-Media-That-Caused-Them-NOT-to-Hire-a-Candidate-According-to-Recent-CareerBuilder-Survey) of 1,012 hiring and human resource managers, 2018)
+]
+---
+
+# Effects of Social Media 
+
+1. Employers have gained access to better signal of candidate quality  
+$\rightarrow$ more efficient matching
+
+2. Candidates private lives more visible to employers  
+$\rightarrow$ Candidates change behaviour
+
+---
+
+# Research Questions
+
+1. How do application reviewers weigh social media info compared to traditional CV info?
+
+2. How do application reviewers react to contradictory info in SM and CV?
+
+3. Does revealing mental health issues on SM hinder a job applicant? 
+
+4. Does a lack of online presence hinder a job applicant?
+
+---
+#Experimental Design
+
+.pull-left[
+<center>
+```{r, echo=F, fig.width = 5, fig.height=8, fig.align="center"}
+library(DiagrammeR)
+mermaid(
+"  
+graph TB
+  A(Pre-Screening) --> B(Job desciption)
+  B --> D(View 6 Applications <br/> Each with a CV and SM)
+  D --> I(Post Questionnaire)
+"
+)
+```
+</center>
+]
+.pull-right[
+<br/>
+<br/>
+<br/>
+![](exp_design_pic1.jpg)
+Participants see social media information and a CV
+]
+---
+#Treatments
+
+**Baseline:** 
+- CV varies according to experience, education, hobbies, gender, skills.  
+- SM varies according to connections, most active groups, most used keywords & hashtags, automatic AI screening report. Hobbies and skills match CV.
+
+
+<table>
+  <tr>
+    <th style = "border: solid 0px #DDEEEE;"></th>
+    <th>Baseline</th>
+    <th>Reasonable Bad</th>
+    <th>Mental Health Issues</th>
+    <th>No SM</th>
+    <th>Gap</th>
+    <th>Lie about Gap</th>
+  </tr>
+  <tr>
+    <th>CV</th>
+    <td>Normal</td>
+    <td>Normal</td>
+    <td>Normal</td>
+    <td>Normal</td>
+    <td>Employment Gap</td>
+    <td>No Employment Gap</td>
+  </tr>
+  <tr>
+    <th>Social Media</th>
+    <td>Normal</td>
+    <td>"bad" / inconsistent</td>
+    <td>Mental Health Issues</td>
+    <td>No Data</td>
+    <td>Employment Gap</td>
+    <td>Employment Gap</td>
+  </tr>
+</table>
+
+---
+# Treatment Mechanism
+
+<table class = "beta">
+  <tr>
+    <th style = "border: solid 0px #DDEEEE;"></th>
+    <th>Baseline</th>
+    <th>Reasonable Bad</th>
+    <th>Mental Health Issues </th>
+  </tr>
+  <tr>
+    <th>Relevant Skills and Endorsements</th>
+    <td>Teamwork: 26<br>Time Management: 9<br>Microsoft Office: 23<br>Administration: 25<br>Customer Service: 5</td>
+    <td>Teamwork: 7<br>Time Management: 2<br>Microsoft Office: 9<br>Administration: 3<br>Customer Service: 1</td>
+    <td>Baseline</td>
+  </tr>
+  <tr>
+    <th>Most used Hashtags & Keywords</th>
+    <td style = "column-count: 2;">#teambuilding, <br>#teamwork, <br>#team, <br>#goteam, <br>#teammate, <br>#together, <br>#collaborationiskey, <br>#thankyou, <br>#community, </td>
+    <td style = "column-count: 2;">#xbox, <br>#gaming, <br>#fortnite, <br>#memes, <br>#fuckmylife, <br>#tgif, <br>#weekendvibes, <br>#tired, <br>#nosleep, <br>#itsonlytuesday, <br>#party, <br>#happyhour </td>
+    <td style = "column-count: 2;">#Therapy, <br>#bipolar, <br>#bipolardisorder, <br>#mentalhealth</td>
+  </tr>
+  <tr>
+    <th>Most Active Groups / Pages</th>
+    <td style = "column-count: 2;">Youth basketball development group, <br>the basketball community, <br>the triangle hiking club, <br>walking and talking, <br>philadelphia roommates, <br>philadelphia networking group, <br>Philly Social Adventures, <br>being neighbourly: philadelphia, <br>Exton/Lionville Community Group, <br>Ardmore community social group</td>
+    <td style = "column-count: 2;">Grand Theft Auto V, <br>Call of Duty, <br>Super Smash Bros, <br>Pokemon Sword, <br>Monster Hunter World,  <br>Diablo, <br>Borderlands, <br>Work Sucks Meme Factory, <br>I Love/Hate My Job, <br>I Hate Monday Mornings</td>
+    <td style = "column-count: 2;">Mental Health America, <br>Mental Health awareness, <br>Mental Health Food, <br>Defeat Depression,  <br>Anxiety and Depression Support Group, <br>Depression and Anxiety Talk</td>
+  </tr>
+  <tr>
+    <th>Automatic Screening Report on SM Activity</th>
+    <td>Social Media language generally positive, interactions generally positive</td>
+    <td>Social Media language is generally neutral, interactions sometimes negative</td>
+    <td>Baseline</td>
+  </tr>
+</table>
+
+---
+
+class: center, middle
+
+Thank You!  
+Comments Welcome
+
